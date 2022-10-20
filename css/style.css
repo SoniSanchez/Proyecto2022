@@ -99,7 +99,7 @@ nav a:hover {
 
 footer {
     text-align: center;
-    background: url(imagenes/bg.jpg);
+    background: url(imagenes/barberialogo1.jpg);
     width: 100%;
 }
 
@@ -118,7 +118,7 @@ form {
 
 form label,
 form legend {
-    display: block;
+    display: inline block;
     font-size: 20px;
     margin: 0 0 10px;
 }
