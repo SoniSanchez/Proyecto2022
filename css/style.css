@@ -293,3 +293,51 @@ th {
     background: #030303;
     padding: 15px;
 }
+
+.principal-escuela {
+    padding: 3em 0;
+    background: #030303;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.titulo-principal-escuela {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+    color: white;
+}
+
+.principal-escuela p {
+    margin: 0 0 1em;
+    text-align: center;
+    color: white;
+}
+
+.cursos {
+    padding: 5em 0;
+    background: #888888;
+}
+
+.contenido-cursos {
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: 5%;
+}
+
+.lista-cursos {
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.imagen-curso {
+    width: 35%;
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 15px #000000;
+}
+
+.imagen-curso:hover {
+    opacity: 0.3;
+}
