@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--al final meto Styles-->
+    <style>
+        .user{
+            background-color: #ddd;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+   
+    <h1>Usuarios de la página</h1>
+             <div id="app"> </div>
+    
+    <script>
+       function fetchData(){
+           fetch("https://reqres.in/api/users")
+           .then(response => {
+               console.log(response);//Veo que me trae status.//me trae una promesaa//un response
+               return response.json();//aca el response ya pasa a ser un json.  deja de ser promesa
+                //LOS PASOS SON: PROMESA A JSON - JSon a Javascript
+            })
+           .then(usuario => {
+               console.log(usuario); 
+               console.log(usuario.data); 
+            const html = usuario.data.map(user =>
+             {  //uso map porque permite transformar y devuelve LA MISMA CANTIDAD
+               console.log(user);//logueo lo que viene
+               console.log(user.first_name +" - " + user.email);//logueo lo que quiero
+                return `
+                <div class="user">
+                <p><img src="${user.avatar}" alt=" ${user.first_name}"/> </p>
+                <p> Nombre: ${user.first_name}</p>
+                <p> Email: ${user.email}</p>
+                </div>           ` 
+            }).join("");//Join agarra elem del array y los transforma en un String
+            console.log(html);//pongo esto para ver que va viniendo
+            document.querySelector("#app").insertAdjacentHTML("afterbegin", html);
+           }).catch(error =>{
+               console.log("El error es: "+error);
+           })
+       }
+    
+       fetchData();
+     </script>
+    
+</body>
+</html>
