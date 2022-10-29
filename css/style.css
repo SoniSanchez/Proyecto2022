@@ -2,11 +2,12 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.contenedor {
+.flex-contenedor {
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
+    display: flex;
 }
 
 header {
